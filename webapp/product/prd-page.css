@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Noto+Sans+KR:300,400,500,700&display=swap");
-/* 폰트 */
+/* 占쏙옙트 */
 button {
   background: transparent;
   border: 0;
@@ -241,12 +241,12 @@ a {
   text-decoration: none;
 }
 
-#cate_list ul .selected-menu a {
+#cate_list ul .selected-menu-2 a {
   font-weight: bold;
   color: black;
 }
 
-#cate_list ul .selected-menu a::after {
+#cate_list ul .selected-menu-2 a::after {
   position: absolute;
   content: "";
   display: block;
@@ -272,11 +272,11 @@ a {
   overflow: clip;
 }
 
-/* 위 끝  */
+/* 占쏙옙 占쏙옙  */
 
 #second-wrap-layout {
   padding: 0 0 85px;
-  /* 푸터와의 거리 벌리기 */
+  /* 푸占싶울옙占쏙옙 占신몌옙 占쏙옙占쏙옙占쏙옙 */
 
   width: 1200px;
   margin: 0 auto;
@@ -377,10 +377,10 @@ a {
   z-index: 1;
 }
 
-.custom-wrap {
+.swiper-wrapper {
   /* ul */
   /* transform: translate3d(-395.77px, 0px, 0px); transition-duration: 0ms; */
-  /* 슬라이드 구현? */
+  /* 占쏙옙占쏙옙占싱듸옙 占쏙옙占쏙옙? */
 
   transform: translate3d(0px, 0px, 0px);
   transition-timing-function: ease-out;
@@ -394,13 +394,13 @@ a {
   box-sizing: content-box;
 }
 
-.custom-option {
+.swiper-slide {
   /* li */
   cursor: pointer;
   margin-right: 8px;
 
   list-style: none;
-  width: auto;
+  width: auto !important;
   flex-shrink: 0;
   -webkit-box-flex: 0;
   height: 100%;
@@ -408,7 +408,7 @@ a {
   flex-grow: 0;
 }
 
-.custom-option a {
+.swiper-slide a {
   pointer-events: none;
 
   display: inline-block;
@@ -422,7 +422,7 @@ a {
   color: black;
 }
 
-/* 선택되었을 때 적용 
+/* 占쏙옙占시되억옙占쏙옙 占쏙옙 占쏙옙占쏙옙 
 .custom-option on_a {
     pointer-events: none;
     display: inline-block;
@@ -435,11 +435,11 @@ a {
 }
 */
 
-.custom-option input {
+.swiper-slide input {
   display: none;
 }
 
-#left-prev {
+#swiper-button-prev {
   left: -45px;
 
   width: 40px;
@@ -448,7 +448,7 @@ a {
   transform: none;
   margin: 0;
 
-  background-image: url(/image/swp_left_arrow_gr.png);
+  background-image: url(../image/swp_left_arrow_gr.png);
   bottom: auto;
   background-size: auto 25px !important;
   filter: invert(1);
@@ -459,7 +459,7 @@ a {
   background-repeat: no-repeat;
 }
 
-#right-next {
+#swiper-button-next {
   right: -45px;
 
   width: 40px;
@@ -468,7 +468,7 @@ a {
   transform: none;
   margin: 0;
 
-  background-image: url(/image/swp_right_arrow_gr.png);
+  background-image: url(../image/swp_right_arrow_gr.png);
   bottom: auto;
   background-size: auto 25px !important;
   filter: invert(1);
@@ -480,7 +480,7 @@ a {
 }
 
 /*
-.더이상 prev,next 할 거 없어서 비활성화될때 {
+.占쏙옙占싱삼옙 prev,next 占쏙옙 占쏙옙 占쏙옙占쏘서 占쏙옙활占쏙옙화占심띰옙 {
     opacity: .35;
     cursor: auto;
     pointer-events: none;
@@ -531,7 +531,7 @@ a {
 }
 
 .item-wrap .item-container > dl > .item-viewlink {
-  /* item 영역 전체 덮는 a */
+  /* item 占쏙옙占쏙옙 占쏙옙체 占쏙옙占쏙옙 a */
   position: absolute;
   display: block;
   top: 0;
@@ -543,7 +543,7 @@ a {
 }
 
 .item-wrap .item-container > dl > .item-image {
-  /* image들 감싸는 div */
+  /* image占쏙옙 占쏙옙占싸댐옙 div */
   margin-bottom: 0px;
   position: relative;
 
@@ -556,7 +556,7 @@ a {
 }
 
 .item-wrap .item-container > dl > .item-image > img:first-of-type {
-  /* 썸네일 이미지  */
+  /* 占쏙옙占쏙옙占� 占싱뱄옙占쏙옙  */
   opacity: 1;
 
   display: block;
@@ -577,7 +577,7 @@ a {
 .item-wrap .item-container > dl > .item-image > img:last-of-type {
   opacity: 0;
 
-  /* hover하면 이거 1로 바꾸도록하고 첫이미지는 0으로 바꾸면 될듯 */
+  /* hover占싹몌옙 占싱곤옙 1占쏙옙 占쌕꾸듸옙占쏙옙占싹곤옙 첫占싱뱄옙占쏙옙占쏙옙 0占쏙옙占쏙옙 占쌕꾸몌옙 占심듸옙 */
   display: block;
   position: absolute;
   top: 50%;
@@ -594,7 +594,7 @@ a {
 }
 
 .cart-in {
-  /* 바로 장바구니 담기 이미지의 div */
+  /* 占쌕뤄옙 占쏙옙袂占쏙옙占� 占쏙옙占� 占싱뱄옙占쏙옙占쏙옙 div */
   display: block;
 
   position: absolute;
@@ -658,7 +658,7 @@ a {
 }
 
 .price-container > .normal-price {
-  /* 할인 전 금액 */
+  /* 占쏙옙占쏙옙 占쏙옙 占쌥억옙 */
   -webkit-box-ordinal-group: 4;
   order: 3;
   display: flex;
@@ -675,7 +675,7 @@ a {
 }
 
 .price-container > .sale-price {
-  /* 실구매 가격 */
+  /* 占실깍옙占쏙옙 占쏙옙占쏙옙 */
   order: 2;
 
   display: flex;
@@ -706,7 +706,7 @@ span.rvCount {
 }
 
 span.rvCount::before {
-  content: "리뷰";
+  content: "리뷰?????????";
   font-weight: normal;
   margin-right: 3px;
 }
@@ -792,7 +792,7 @@ span.rvCount::before {
 }
 
 #page-container > ol > li > a.this {
-  /* 선택된 페이지 */
+  /* 占쏙옙占시듸옙 占쏙옙占쏙옙占쏙옙 */
   color: #2c2c2c;
   font-weight: bold;
 
@@ -804,7 +804,7 @@ span.rvCount::before {
 }
 
 #page-container > ol > li > a {
-  /* 선택 안된 페이지 */
+  /* 占쏙옙占쏙옙 占싫듸옙 占쏙옙占쏙옙占쏙옙 */
 
   color: #b8b8b8;
   font-size: 14px;
@@ -861,7 +861,7 @@ span.rvCount::before {
   font-family: "Gulim", "Noto Sans KR", sans-serif;
 }
 
-/* 나만의 디자인 */
+/* 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙 */
 
 #third-wrap {
   display: block;
@@ -880,16 +880,16 @@ span.rvCount::before {
   bottom: 0;
   color: #2e2e2e;
   background: #fff;
+  overflow: hidden;
 }
 
 .side-filter-main {
-  /* form 태그 */
+  /* form 占승깍옙 */
   /* overflow: hidden; */
 }
 
 #third-wrap .side-filter-main #searchArea {
-  /* 전체 감싸는 padding */
-  height: 1199px;
+  /* 占쏙옙체 占쏙옙占싸댐옙 padding */
   display: block;
 
   max-width: 530px;
@@ -903,7 +903,7 @@ span.rvCount::before {
 }
 
 #searchArea > h1 {
-  /* '내가 원하는 디자인 찾기' h1 */
+  /* '占쏙옙占쏙옙 占쏙옙占싹댐옙 占쏙옙占쏙옙占쏙옙 찾占쏙옙' h1 */
   position: relative;
   font-size: 24px;
   line-height: 24px;
@@ -917,21 +917,21 @@ span.rvCount::before {
 }
 
 #searchArea > h1 > span {
-  /* 닫기 아이콘 */
+  /* 占쌥깍옙 占쏙옙占쏙옙占쏙옙 */
   float: right;
   padding: 3px 0;
   cursor: pointer;
 }
 
 #side-filter-area > span > img {
-  /* 닫기 이미지 */
+  /* 占쌥깍옙 占싱뱄옙占쏙옙 */
 }
 
 .side-filter {
 }
 
 .side-filter-title {
-  /* '카테고리' '라인업'  '디자인' ... */
+  /* '카占쌓곤옙占쏙옙' '占쏙옙占싸억옙'  '占쏙옙占쏙옙占쏙옙' ... */
   padding: 45px 0 20px 0;
   font-size: 18px;
   line-height: 1;
@@ -974,7 +974,7 @@ span.rvCount::before {
 }
 
 .side-check-type > ul > li:nth-child(4n):not(:first-child) {
-  /* 4n번째 놈은 오른쪽 마진 없애서 한줄에 네개 들어가게 */
+  /* 4n占쏙옙째 占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙 占쏙옙占쌍쇽옙 占쏙옙占쌕울옙 占쌓곤옙 占쏙옙載∽옙占� */
   margin-right: 0;
 }
 
@@ -983,7 +983,7 @@ span.rvCount::before {
 }
 
 .side-check-type > ul > li > .side-type-check {
-  /* 체크박스 (검색조건) */
+  /* 체크占쌘쏙옙 (占싯삼옙占쏙옙占쏙옙) */
   width: 0;
   height: 0px;
   background: none;
@@ -1012,7 +1012,7 @@ span.rvCount::before {
   border: 1px solid #e6e6e6;
 }
 
-/* 컬러 */
+/* 占시뤄옙 */
 
 .side-check-type-color {
   padding: 0 20px;
@@ -1101,26 +1101,26 @@ span.rvCount::before {
   text-align: center;
 }
 
-/* 컬러별 색상 원 */
+/* 占시뤄옙占쏙옙 占쏙옙占쏙옙 占쏙옙 */
 
 .side-check-type-color
   .side-type-list-color
   > li
-  > input[value$="코랄핑크"]
+  > input[value$="占쌘띰옙占쏙옙크"]
   + label::before {
   background: #e4a0a6;
 }
 .side-check-type-color
   .side-type-list-color
   > li
-  > input[value$="블루네이비"]
+  > input[value$="占쏙옙占쏙옙占쏙옙遣占�"]
   + label::before {
   background: #73a3cc;
 }
 
-/* 초기화 / 검색하기 버튼 */
+/* 占십깍옙화 / 占싯삼옙占싹깍옙 占쏙옙튼 */
 #side-filter-search {
-  /* 두 버튼 감싸는 div */
+  /* 占쏙옙 占쏙옙튼 占쏙옙占싸댐옙 div */
   display: block;
   width: 100%;
   margin-top: 50px;
@@ -1157,7 +1157,7 @@ span.rvCount::before {
   line-height: 55px;
 }
 
-/* 시훈이형 */
+/* 占쏙옙占쏙옙占쏙옙占쏙옙 */
 .footer {
   background-color: #474747;
   padding: 20px;
@@ -1250,7 +1250,7 @@ span.rvCount::before {
   transition: 0.5s ease;
 }
 
-/* 재윤 */
+/* 占쏙옙占쏙옙 */
 
 img.header {
   width: 100%;
