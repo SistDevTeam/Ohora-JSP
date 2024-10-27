@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="oho_memInfo.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -93,7 +94,7 @@
                                                </th> 
                                                <td>
                                                     <input type="password" id="passwd-confirm" name="passwd-confirm" maxlength="16">
-                                                    <span id="pwConfirmMsg" class="error">비밀번호가 일치하지 않습니다.</span>
+                                                    <span id="pwConfirmMsg" class=""></span>
                                                     <!-- 이 span은 비밀번호 확인 다르게 입력하면 class에 error 추가되면서 글 튀어나옴 -->
                                                </td>
                                             </tr>
@@ -224,7 +225,7 @@
                                                 </th>
                                                 <td>
                                                     <input type="text" id="email1" name="email1">
-                                                    <span id="emailMsg" class="error">유효한 이메일을 입력해 주세요.</span>
+                                                    <span id="emailMsg" class=""></span>
                                                     <!-- 얘도 형식 어긋나면 error 클래스 추가되면서 옆에 튀어나옴 -->
                                                     <!-- 공백 시에는 이메일을 입력해 주세요. 라고 나옴 -->
                                                     <!-- 중복 시에는  이미 사용중인 이메일입니다. 다른 이메일로 다시 시도해 주세요. 라고 나옴 -->
@@ -389,4 +390,6 @@
         }).open();
     }
 </script>
+
+<script src="oho_memInfo.js"></script>
 </html>
