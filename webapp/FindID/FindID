@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아이디 찾기</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link
+	href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"
+	rel="stylesheet">
+
+<style>
+.container {
+	overflow: hidden;
+	width: 1920px;
+	height: 670px;
+	position: absolute;
+}
+
+.title {
+	color: rgba(0, 0, 0, 1);
+	width: 138.04px;
+	height: 37px;
+	position: absolute;
+	left: 891.13px;
+	top: 130px;
+	font-family: 'Libre Baskerville', serif;
+	text-align: center;
+	font-size: 30px;
+}
+
+.description {
+	color: rgba(119, 119, 119, 1);
+	width: 496.52px;
+	height: 35px;
+	position: absolute;
+	left: 711.84px;
+	top: 205px;
+	font-family: 'Noto Sans KR', sans-serif;
+	text-align: center;
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.form-container {
+	width: 500px;
+	height: 296px;
+	position: absolute;
+	left: 710px;
+	top: 261px;
+}
+
+.label-container {
+	background-color: rgba(241, 241, 241, 1);
+	width: 160px;
+	height: 34px;
+	position: absolute;
+	top: 10px;
+}
+
+.label-text {
+	color: rgba(0, 0, 0, 1);
+	font-family: 'Noto Sans KR', sans-serif;
+	text-align: left;
+	font-size: 12px;
+	position: absolute;
+	left: 10px;
+	top: 8px;
+	line-height: 1.5;
+}
+
+.dropdown-select {
+	width: 330px;
+	height: 34px;
+	position: absolute;
+	left: 170px;
+	top: 10px;
+	font-size: 12px;
+	font-family: 'Noto Sans KR', sans-serif;
+	border: 1px solid rgba(221, 221, 221, 1);
+	background-color: rgba(255, 255, 255, 1);
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.radio-group {
+	display: flex;
+	gap: 15px;
+	position: absolute;
+	top: 65px;
+}
+
+.radio-label {
+	color: rgba(0, 0, 0, 1);
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.input-field {
+	width: 330px;
+	height: 34px; 
+	position: absolute;
+	left: 170px;
+	border: 1px solid rgba(221, 221, 221, 1);
+	padding: 0 10px;
+	font-size: 12px;
+	font-family: 'Noto Sans KR', sans-serif;
+	box-sizing: border-box; 
+}
+
+.button-container {
+	width: 500px;
+	height: 60px;
+	position: absolute;
+	top: 236px;
+	background-color: rgba(0, 0, 0, 1);
+	border: 1px solid rgba(0, 0, 0, 1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button-container button {
+	background-color: transparent;
+	border: none;
+	color: rgba(255, 255, 255, 1);
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 18px;
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <span class="title">ID FIND</span> 
+        <span class="description">
+            가입하신 방법에 따라 아이디 찾기가 가능합니다. 법인사업자 회원 또는 외국인 회원의 경우 법인명과 법인번호 또는 이름과 등록번호를 입력해 주세요.
+        </span>
+        <form class="form-container">
+           
+            <div class="label-container">
+                <span class="label-text">회원유형</span>
+            </div>
+            <select class="dropdown-select" name="membership_type">
+                <option value="개인회원">개인회원</option>
+                <option value="개인사업자 회원">개인사업자 회원</option>
+                <option value="법인사업자 회원">법인사업자 회원</option>
+                <option value="외국인 회원">외국인 회원</option>
+            </select>
+            <div class="radio-group">
+                <input type="radio" id="email" name="contact_method" value="email" checked="checked">
+                <label for="email" class="radio-label">이메일</label>
+                <input type="radio" id="phone" name="contact_method" value="phone">
+                <label for="phone" class="radio-label">휴대폰번호</label>
+                <input type="radio" id="companynumber" name="contact_method" value="companynumber" style="display: none;">
+                <label for="companynumber" class="radio-label" style="display: none;">법인번호</label>
+                <input type="radio" id="registrationnumber" name="contact_method" value="registrationnumber" style="display: none;">
+                <label for="registrationnumber" class="radio-label" style="display: none;">등록번호</label>
+            </div>
+         
+            <div class="label-container" style="top: 108px;">
+                <span class="label-text" id="nameLabel">이름</span>
+            </div>
+            <input type="text" class="input-field" style="top: 108px;" name="name">
+            <div class="label-container" id="findByEmail" style="top: 152px;">
+                <span class="label-text">이메일로 찾기</span>
+            </div>
+            <input type="text" class="input-field" id="emailInput" style="top: 152px; left: 170px;" name="email">
+            <div class="label-container" id="findByPhone" style="top: 152px; display: none;">
+                <span class="label-text">휴대폰번호로 찾기</span>
+            </div>
+            <input type="text" class="input-field" id="phoneInput" style="top: 152px; left: 170px; display: none;" name="phone">
+            <div class="label-container" id="findByCompanynumber" style="top: 152px; display: none;">
+                <span class="label-text">법인번호로 찾기</span>
+            </div>
+            <input type="text" class="input-field" id="companynumberInput" style="top: 152px; left: 170px; display: none;" name="companynumber">
+            <div class="label-container" id="findByRegistrationnumber" style="top: 152px; display: none;">
+                <span class="label-text">등록번호로 찾기</span>
+            </div>
+            <input type="text" class="input-field" id="registrationnumberInput" style="top: 152px; left: 170px; display: none;" name="registrationnumber">
+            <div class="button-container">
+                <button type="submit" class="button-text">확인</button>
+            </div>
+        </form>
+    </div>
+	
+	<script>
+		$(document).ready(function() {
+			
+			// 연락 방법에 따른 필드 전환 함수
+			function toggleContactMethod(method, isCorporate = false, isForeigner = false) {
+				if (isCorporate) {  // 법인사업자 회원
+					$('#findByCompanynumber, #companynumberInput').toggle(method === 'companynumber');
+					$('#findByEmail, #emailInput').toggle(method === 'email');
+					$('#findByPhone, #phoneInput').toggle(method === 'phone');
+				} 
+				else if (isForeigner) {  // 외국인 회원
+					$('#findByRegistrationnumber, #registrationnumberInput').toggle(method === 'registration');
+					$('#findByEmail, #emailInput').toggle(method === 'email');
+					$('#findByPhone, #phoneInput').toggle(method === 'phone');
+				} 
+				else {  // 개인회원 또는 개인사업자 회원
+					$('#findByEmail, #emailInput').toggle(method === 'email');
+					$('#findByPhone, #phoneInput').toggle(method === 'phone');
+				}
+			}
+	
+			// 초기 필드 설정 함수
+			function resetFields() {
+				$('#findByEmail, #emailInput, #findByPhone, #phoneInput, #findByCompanynumber, #companynumberInput, #findByRegistrationnumber, #registrationnumberInput').hide();
+				$('#companynameLabel').closest('.label-container').hide(); // 법인명 라벨과 입력 필드 숨기기
+				$('#nameLabel').text('이름');  // 기본 라벨 텍스트로 초기화
+				$('#companynumber, label[for="companynumber"], #registrationnumber, label[for="registrationnumber"]').hide(); // 법인번호, 등록번호 라디오 버튼 숨기기
+			}
+	
+			// 회원 유형에 따른 초기 필드 설정 함수
+			function setMembershipFields(selectedType) {
+				resetFields();
+				if (selectedType === '개인회원' || selectedType === '개인사업자 회원') {
+					// 개인회원 및 개인사업자: 이름과 이메일 or 휴대폰 번호 필드
+					$('#findByEmail, #emailInput').show(); // 기본은 이메일로 찾기
+					$('#phone').on('click', function() {
+						toggleContactMethod('phone');
+					});
+					$('#email').on('click', function() {
+						toggleContactMethod('email');
+					});
+				} 
+				else if (selectedType === '법인사업자 회원') {
+					// 법인사업자면 기본은 법인번호로 찾기
+					$("#companynumber").prop("checked", true);
+					$('#companynameLabel').closest('.label-container').show();
+					$('#companynumber, label[for="companynumber"]').show();
+					$('#findByCompanynumber, #companynumberInput').show(); 
+					$('#nameLabel').text('법인명');
+					
+					// 법인사업자 연락 방법 선택 시 필드 전환
+					$('#phone').on('click', function() {
+						toggleContactMethod('phone', true);
+					});
+					$('#email').on('click', function() {
+						toggleContactMethod('email', true);
+					});
+					$('#companynumber').on('click', function() {
+						toggleContactMethod('companynumber', true);
+					});
+				} 
+				else if (selectedType === '외국인 회원') {
+					// 외국인 회원: 기본은 등록번호로 찾기
+					$("#registrationnumber").prop("checked", true);
+					$('#registrationnumber, label[for="registrationnumber"]').show();
+					$('#findByRegistrationnumber, #registrationnumberInput').show();
+					
+					// 외국인 회원 연락 방법 선택 시 필드 전환
+					$('#phone').on('click', function() {
+						toggleContactMethod('phone', false, true);
+					});
+					$('#email').on('click', function() {
+						toggleContactMethod('email', false, true);
+					});
+					$('#registrationnumber').on('click', function() {
+						toggleContactMethod('registration', false, true);
+					});
+				}
+			}
+	
+			// 초기 회원 유형에 따른 필드 설정
+			$('.dropdown-select').on('change', function() {
+				setMembershipFields($(this).val());
+			});
+	
+			// 기본 이메일 및 휴대폰번호 클릭 이벤트 정의
+			$('#phone').on('click', function() {
+				toggleContactMethod('phone');
+			});
+			$('#email').on('click', function() {
+				toggleContactMethod('email');
+			});
+		});
+	</script>
+	
+	
+</body>
+</html>
