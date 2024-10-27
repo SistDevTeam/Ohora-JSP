@@ -357,8 +357,7 @@ img {
 }
 
 .thumb_img{
-    opacity: 1;
-
+    
     display: block;
     position: absolute;
     top: 50%;
@@ -369,7 +368,9 @@ img {
     width: 100%;
     object-fit: contain;
     transition: all 0.3s;
+    opacity: 1;
 }
+
 
 .hover_img{
     transition: all 0.3s;

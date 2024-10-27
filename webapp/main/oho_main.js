@@ -7,3 +7,15 @@ $('.find_color_list span').on("click", function() {
 $('.find_color_list div.find_color_btn').on("click", function() {
     // 서브밋?
 });
+
+
+$(".items-swiper-wrapper li").on({
+    mouseenter: function() {
+        //alert("asd")
+        $(this).find(".thumb_img").css("opacity" ,"0")
+        $(this).find(".hover_img").css("opacity" ,"1")
+    },mouseleave: function() {
+        $(this).find(".hover_img").css("opacity" ,"0")
+        $(this).find(".thumb_img").css("opacity" ,"1")
+    }
+});
